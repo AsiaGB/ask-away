@@ -1,0 +1,238 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title> Pixie Oracle </title>
+	<link rel="stylesheet" href="oraclestyle.css">
+	<meta charset=utf-8 />
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22black%22>🔮</text></svg>">
+
+<!--fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+	
+
+</head>
+
+<body>
+
+	<h1>✨ Ask the universe ✨</h1>
+
+	<div id="gif-container"> 
+        <img id="my-gif" src="pixie-oracle.gif" alt="My GIF">  
+        </div> 
+
+	<button id="draw-button" onclick="display_random_image();"> Draw a card 🔮</button>
+
+	<div id="carta-random">
+	
+<script>
+function display_random_image() 
+{
+     var theImages = [{
+         src: "1.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "2.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "3.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "4.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "5.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "6.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "7.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "8.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "9.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "10.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "11.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "12.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "13.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "14.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "15.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "16.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "17.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "18.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "19.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "20.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "21.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "21.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "23.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "24.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "25.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "26.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "27.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "28.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "29.png",
+	width: "600",
+        height: "600"
+    }, {
+	src: "30.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "31.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "32.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "33.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "34.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "35.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "36.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "37.png",
+	width: "700",
+        height: "700"
+    }, {
+        src: "38.png",
+	width: "700",
+        height: "700"
+    }, {
+         src: "39.png",
+	width: "700",
+        height: "700"
+    }, {
+	src: "40.png",
+	width: "700",
+        height: "700"
+}];
+    
+    var preBuffer = [];
+    for (var i = 0, j = theImages.length; i < j; i++) {
+        preBuffer[i] = new Image();
+        preBuffer[i].src = theImages[i].src;
+	  preBuffer[i].width = theImages[i].width;
+        preBuffer[i].height = theImages[i].height;
+        
+    }
+   
+// create random image number
+  function getRandomInt(min,max) 
+    {
+      //  return Math.floor(Math.random() * (max - min + 1)) + min;
+    
+imn = Math.floor(Math.random() * (max - min + 1)) + min;
+    return preBuffer[imn];
+    }  
+
+// 0 is first image,   preBuffer.length - 1) is  last image
+  
+var newImage = getRandomInt(0, preBuffer.length - 1);
+ 
+// remove the previous images
+var images = document.getElementsByTagName('img');
+var l = images.length;
+for (var p = 0; p < l; p++) {
+    images[0].parentNode.removeChild(images[0]);
+}
+// display the image  
+document.body.appendChild(newImage);
+}
+</script>
+	</div>
+
+	<div id="copyright">
+	<p> Project: ©AsiaBalzarotti, Oracles: ©SpiritSpeak
+	</p>
+	</div>
+
+
+</body>
+
+</html>
